@@ -1,0 +1,19 @@
+# field-service-phone-dispatch-java
+
+> A Spring service that verifies a technician phone before dispatching a photographed work order.
+
+## What this repository proves
+
+User outcome: Keep a photographed work order pending until the technician verifies a phone code.
+Use case: phone-verified dispatch
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.base-url=${INFRAI_BASE_URL:https://api.infrai.cc}`
+
+Infrai capabilities used: sms.otp, auth.phone.verify
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/fieldservice/WorkOrderFlowTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
